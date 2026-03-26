@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login screen -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-box">
+      <h1>Memo</h1>
+      <p>Sign in to access your memos from anywhere.</p>
+      <button id="loginBtn">Login with GitHub</button>
+    </div>
+  </div>
+
+  <!-- Main app -->
+  <div class="app" id="app">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>Memo</h1>
+        <div class="sidebar-actions">
+          <button id="newBtn" title="New memo">+</button>
+          <button id="logoutBtn" title="Logout">↪</button>
+        </div>
+      </div>
+      <ul id="memoList"></ul>
+    </div>
+    <div class="editor">
+      <input type="text" id="titleInput" placeholder="Title" />
+      <textarea id="bodyInput" placeholder="Start writing..."></textarea>
+      <div class="editor-footer">
+        <span id="lastSaved"></span>
+        <button id="deleteBtn" title="Delete memo">Delete</button>
+      </div>
+    </div>
+    <div class="todo-panel" id="todoPanel">
+      <div class="todo-resize-handle" id="todoResizeHandle"></div>
+      <div class="todo-header">
+        <h2>Todo</h2>
+      </div>
+      <div class="todo-input-row">
+        <input type="text" id="todoInput" placeholder="Add a task..." />
+        <button id="todoAddBtn">+</button>
+      </div>
+      <ul id="todoList"></ul>
+    </div>
+  </div>
+
+  <!-- Confirm modal -->
+  <div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+      <p id="confirmMessage">Are you sure?</p>
+      <div class="confirm-actions">
+        <button id="confirmCancel">Cancel</button>
+        <button id="confirmOk">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
